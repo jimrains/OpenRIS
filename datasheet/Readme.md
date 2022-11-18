@@ -4,7 +4,7 @@ This directory contains information on the device performance
 
 ## Local Reflection Coefficients
 
-The device provides a 1-bit reflection response at both linear polarisations. This 1-bit response needs to be tuned to the centre operating frequency. 
+The device provides a 1-bit reflection response at both linear polarisations. This 1-bit response needs to be tuned to the centre operating frequency. For information on usage, see [here](https://github.com/jimrains/USCRIS/edit/main/datasheet/Readme.md#local-reflection-coefficients-how-to-use-this-data).
 
 ### Reflection coefficient measurement setup
 
@@ -14,18 +14,25 @@ The two horn antennas, directed at the center of a single RIS tile, are position
 
 ### Calibration
 
-In order to remove the contributions of the cables, horn antennas, and path loss from the RIS tile response in the S21 measurement, we first normalise to the reflection response of a homogenous metal plate. A copper plate is placed in contact with the tile face and the S21 is normalised. The reflection coefficients are then extracted by removing the copper plate and ascertaining the magnitude and phase responses for the reverse bias voltage levels of interest.
+In order to remove the contributions of the cables, horn antennas, and path loss from S21 response in the measurements, we first normalise to the reflection response of a homogenous metal plate. A copper plate is placed in contact with the tile face and the S21 is normalised. This results in the reference case of a "perfect" reflector. The reflection coefficients are then extracted by removing the copper plate and ascertaining the magnitude and phase responses for the varactor reverse bias voltage levels of interest.
 
 ### Local reflection response
 
-Magnitude and phase versus frequency
-<img src="images/meas_phase_v_frequency.png" width="800" />
-Magnitude and phase versus reverse-bias voltage
-<img src="images/meas_phase_v_voltage.png" width="400" />
 
+<img src="images/meas_phase_v_frequency.png" width="800" />
+Magnitude and phase versus frequency
+
+<br><br>
+
+<img src="images/meas_phase_v_voltage.png" width="400" />
+Magnitude and phase versus reverse-bias voltage
+
+### Local reflection coefficients: how to use this data
 
 ## Radiation Patterns
 
 ### Far field measurement setup
 
 ### Calibration
+
+### Radiation patterns: how to use this data
