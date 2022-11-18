@@ -18,7 +18,9 @@ In order to remove the contributions of the cables, horn antennas, and path loss
 
 ### Local reflection response
 
+Magnitude and phase versus frequency
 <img src="images/meas_phase_v_frequency.png" width="800" />
+Magnitude and phase versus reverse-bias voltage
 <img src="images/meas_phase_v_voltage.png" width="400" />
 
 
