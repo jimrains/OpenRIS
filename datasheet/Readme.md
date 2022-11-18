@@ -6,7 +6,7 @@ This directory contains information on the device performance
 
 ### Reflection coefficient measurement setup
 
-![Reflection coefficient measurement setup](images/refMeasSetup.png "Reflection coefficient measurement setup")
+![Reflection coefficient measurement setup](images/refMeasSetup.jpg "Reflection coefficient measurement setup")
 
 
 ## Radiation Patterns
