@@ -6,9 +6,14 @@ This directory contains information on the device performance
 
 ### Reflection coefficient measurement setup
 
-![Reflection coefficient measurement setup](images/refMeasSetup.png "Reflection coefficient measurement setup")
+<img src="images/refMeasSetup.png" width="400" />
 
+### Calibration
+
+### Local reflection response
 
 ## Radiation Patterns
 
 ### Far field measurement setup
+
+### Calibration
