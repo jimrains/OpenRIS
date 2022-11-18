@@ -4,6 +4,8 @@ This directory contains information on the device performance
 
 ## Local Reflection Coefficients
 
+The device provides a 1-bit reflection response at both linear polarisations. This 1-bit response needs to be tuned to the centre operating frequency. 
+
 ### Reflection coefficient measurement setup
 
 <img src="images/refMeasSetup.png" width="400" />
