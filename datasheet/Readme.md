@@ -16,7 +16,7 @@ In order to remove the contributions of the cables, horn antennas, and path loss
 
 ### Local reflection response
 
-<img src="images/meas_phase_v_freq.png" width="400" />
+<img src="images/meas_phase_v_frequency.png" width="400" />
 <img src="images/meas_phase_v_voltage.png" width="400" />
 
 
