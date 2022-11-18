@@ -12,7 +12,7 @@ The two horn antennas, directed at the center of a single RIS tile, are position
 
 ### Calibration
 
-In order to remove the contributions of the cables, horn antennas, and path loss from the RIS tile response in the S21 measurement, we first normalise to the reflection response of a homogenous metal plate. A copper plate is placed in contact with the tile face and the S21 is normalised via the calibration menu on the VNA. The reflection coefficients are then extracted by removing the copper plate and ascertaining the magnitude and phase responses for the reverse bias voltage levels of interest.
+In order to remove the contributions of the cables, horn antennas, and path loss from the RIS tile response in the S21 measurement, we first normalise to the reflection response of a homogenous metal plate. A copper plate is placed in contact with the tile face and the S21 is normalised. The reflection coefficients are then extracted by removing the copper plate and ascertaining the magnitude and phase responses for the reverse bias voltage levels of interest.
 
 ### Local reflection response
 
