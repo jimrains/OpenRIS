@@ -2,9 +2,20 @@
 
 This directory contains information on the device performance
 
+## Overview of Operating Principles
+
+$$ P_r = P_t\frac{G_tG_rd_xd_y\lambda^2}{64\pi^3}|\sum_{m=1-\frac{M}{2}}^{M/2}\sum_{n=1-\frac{N}{2}}^{N/2}\frac{\sqrt{F_{n,m}^{combine}}\ \Gamma_{n,m}}{r_{n,m}^tr_{n,m}^r}e^{(-j\frac{2\pi}{\lambda}(r_{n,m}^t+r_{n,m}^r))}|^2 $$
+
 ## Local Reflection Coefficients
 
-The device provides a 1-bit reflection response at both linear polarisations. This 1-bit response needs to be tuned to the centre operating frequency. For information on usage, see [here](https://github.com/jimrains/USCRIS/edit/main/datasheet/Readme.md#local-reflection-coefficients-how-to-use-this-data).
+To synthesise a desired RIS re-radiation response, we set the reflection coefficients $Γ_{n,m}$ associated with each unit cell. The RIS consists of many constituent elements, each of which can be tuned between 2 reflection coefficient values on each polarisation. This 2-state response is often referred to as a 1-bit response. The device provides a 1-bit reflection response at both linear polarisations. This 1-bit response needs to be tuned to the centre operating frequency. We can approximate what the local reflection coefficient for a given unit cell is by: 
+
+- Place the sample unit cell within a waveguide and measuring the S11, subject to some caveats (see ##), or
+- Measure the reflection response of a metasurface consisting of similar unit cell elements, each with the same bias conditions
+
+We have opted for the second approach here since it requires no more equipment than that required for ascertaining the radiation patterns.
+
+For information on usage of this local reflection coefficient data, skip to [here](https://github.com/jimrains/USCRIS/edit/main/datasheet/Readme.md#local-reflection-coefficients-how-to-use-this-data).
 
 ### Reflection coefficient measurement setup
 
@@ -20,12 +31,12 @@ In order to remove the contributions of the cables, horn antennas, and path loss
 
 
 <img src="images/meas_phase_v_frequency.png" width="800" />
-Magnitude and phase versus frequency
+Γ magnitude and phase versus frequency
 
 <br><br>
 
 <img src="images/meas_phase_v_voltage.png" width="400" />
-Magnitude and phase versus reverse-bias voltage
+Γ magnitude and phase versus reverse-bias voltage
 
 ### Local reflection coefficients: how to use this data
 
