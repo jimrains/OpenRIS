@@ -1,14 +1,10 @@
 ### Test RIS configuration setting code
-
-
 ## Send 32 bits of data and clock in
-
-
 ## go for 101010101... on the hardware itself
 
 import RPi.GPIO as GPIO
 import time
-import tilemapping
+#import tilemapping
 
 SCLK =  [3,11,21]
 LATCH = [5,13,23]
@@ -23,7 +19,6 @@ map.reverse()
 
 colmap = map + [x + 32 for x in map] + [x + 64 for x in map] + [x + 96 for x in map]
 colmap = [x - 1 for x in colmap]
-
 
 def initPIcom():
 	GPIO.setmode(GPIO.BOARD)
@@ -55,20 +50,24 @@ def mapbits(bits):
 def setconf(tile_num, config):
 
 	# Data for 4 columns of shift registers (128 bits per)
+#	print(config)
+#	print('Config length:')
+#	print(len(config))
 	D1,D2,D3,D4 = mapbits(config)
+
 
 	# Tile number index (0-2)
 	t = tile_num - 1
 
 	# Set latch low
 	GPIO.output(LATCH[t], GPIO.LOW)
-	GPIO.output(LATCH[t], GPIO.LOW)
+#	GPIO.output(LATCH[t], GPIO.LOW)
 
 	# Cycle over 4 parallel data streams
 	for k in range(0,128):
 		GPIO.output(SCLK[t], GPIO.LOW)
-		GPIO.output(SCLK[t], GPIO.LOW)
-
+#		GPIO.output(SCLK[t], GPIO.LOW)
+		#time.sleep(0.001)
 		## Send out data on 4 lines
 		if D1[k] > 0:
 			GPIO.output(DATA1[t], GPIO.HIGH)
@@ -91,14 +90,7 @@ def setconf(tile_num, config):
 
 		# Clock in the data lines
 		GPIO.output(SCLK[t], GPIO.HIGH)
-
+		#time.sleep(0.001)
 	# Latch in data
 	GPIO.output(LATCH[t], GPIO.HIGH)
 
-#initPIcom()
-
-#while 1:
-#	data = [0]*512
-#	data[488:496] = [1,1,1,1,0,0,1,1]
-#	data[456:464] = [1,1,1,1,1,1,1,1]
-#	setconf(1, data)
