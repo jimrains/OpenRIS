@@ -3,7 +3,7 @@ Reconfigurable Intelligent Surface project for the WiDeS Group at USC. Please di
 
 # Documentation To do:
 - Access point setup
-- Socket setup
+- ~~Socket setup~~
 - Python code (interfacing w/ digital pins)
 - Hardware outline
 - Pinouts
