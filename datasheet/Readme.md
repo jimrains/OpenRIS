@@ -4,13 +4,16 @@ This directory contains information on the device performance
 
 ## Overview of Operating Principles
 
+A typical RIS deployment is shown in the image below. A receiver located within the user equipment (UE) is served by the base station (BS) via the reconfigurable intelligent surface (RIS), circumventing the highly-attenuated direct path between the BS and the UE.
+
+<img src="images/system_model.png" width="400" />
+
 If we consider a geometrical optics approximation, the below equation can be used to approximate the power $P_r$, received at an antenna with gain $G_r$, originating from reradiation from a RIS consisting of an arrangement of $MN$ elements. Each element is considered to have lateral dimensions $d_x$ and $d_y$ referring to the x and y axes, respectively. $\lambda$ is the wavelength at the frequency of interest. Taking the origin of the coordinate system at the center of the RIS, $r_{n,m}^t$ and $r_{n,m}^r$ are the distances between the transmitter and element (n,m) and the receiver and element (n,m), respectively. Any path between the transmitter and receiver is assumed to be neglible (thereby warranting the deployment of the RIS to mitigate this). The radiation patterns in reception and transmission are factored into the received power formulation through $F_{n,m}^{combine}$. 
 
 $$ P_r = P_t\frac{G_tG_rd_xd_y\lambda^2}{64\pi^3}|\sum_{m=1-\frac{M}{2}}^{M/2}\sum_{n=1-\frac{N}{2}}^{N/2}\frac{\sqrt{F_{n,m}^{combine}}\ \Gamma_{n,m}}{r_{n,m}^tr_{n,m}^r}e^{(-j\frac{2\pi}{\lambda}(r_{n,m}^t+r_{n,m}^r))}|^2 $$
 
 For a fixed RIS position, the controllability of the wireless channel is achieved through the variability of $\Gamma_{n,m}$. 
 
-<img src="images/system_model.png" width="400" style="float: right" />
 
 ## Local Reflection Coefficients
 
