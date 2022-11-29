@@ -1,5 +1,5 @@
 # USCRIS
-Reconfigurable Intelligent Surface project for the WiDeS Group at USC
+Reconfigurable Intelligent Surface project for the WiDeS Group at USC. Please direct questions to james.rains@glasgow.ac.uk.
 
 # Documentation To do:
 - Access point setup
