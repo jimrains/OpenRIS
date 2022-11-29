@@ -22,3 +22,4 @@ If for whatever reason you need to access the graphical user interface (GUI) of 
 
 - In the secure shell, run the command **vncserver**. Note down the IP address and the number following the colon.
 - Open VNC Viewer or an equivalent program. Use the VNC server address **192.168.4.1:#** where **#** is the number obtained in the previous step (typically defaults to 1 if no other session is open).
+- Enter the username and password of the Pi. This is set to default.
