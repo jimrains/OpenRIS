@@ -10,11 +10,15 @@ RIS configurations are sent over a WiFi link hosted on the Raspberry Pi. A socke
 
 The current procedure for setting up a socket for RIS control involves:
 
-- Connect to the WiFi **PiRS** access point from the user machine
+- Connect to the **PiRS** WiFi access point from the user machine
 - Establish control of the Pi via SSH (i.e., via the command __ssh pi@192.168.4.1__). Use the default username and password.
 - Run the program **python ~/control/socket-server-tiles.py**
 - Note the port number **port_number** (this can be found in the **PORT** variable in the program)
 - In MATLAB on the user machine, run the command **sock = tcpclient("192.168.4.1", port_number)** where **port_number** is an integer of the port number displayed when running the server
+
+## MATLAB Interfacing
+
+Configurations are sent over the socket in the form of a string of bits. Additionally, a tile number is sent so that the Pi knows which set of GPIO pins it should send the control signals over. For an overview of the GPIO connections, see the [**hardware** directory](https://github.com/jimrains/USCRIS/tree/main/hardware). 
 
 ## Pi Graphical User Interface
 
