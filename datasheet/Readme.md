@@ -12,15 +12,14 @@ If we consider a geometrical optics approximation, the below equation can be use
 
 $$ P_r = P_t\frac{G_tG_rd_xd_y\lambda^2}{64\pi^3}|\sum_{m=1-\frac{M}{2}}^{M/2}\sum_{n=1-\frac{N}{2}}^{N/2}\frac{\sqrt{F_{n,m}^{combine}}\ \Gamma_{n,m}}{r_{n,m}^tr_{n,m}^r}e^{(-j\frac{2\pi}{\lambda}(r_{n,m}^t+r_{n,m}^r))}|^2 $$
 
-For a fixed RIS position, the controllability of the wireless channel is achieved through the variability of $\Gamma_{n,m}$. 
-
+For a fixed RIS position, the controllability of the wireless channel is achieved through the tunability of $\Gamma_{n,m}$. For a given element geometry, $\Gamma_{n,m}$ determines the change in the phase and magnitude of an incident local electric field - this is observed on the re-radiated local electric field. As governed by the Huygen-Fresnel principle, we can craft the localised re-radiated electric field components such that they add constructively in a dominant direction, form a split beam, or any number of application-dependent forms. Elements are tuned by varying the reactance of the grid impedance associated with a given element. In the prototype in this archive, we have employed varactor diodes to provide this tunable impedance. The digital nature of the control circuitry limits us to 2 tuning states per polarisation per unit cell element. This does not pose a significant limitation on the beamforming performance of these devices.
 
 ## Local Reflection Coefficients
 
-To synthesise a desired RIS re-radiation response, we set the reflection coefficients $Γ_{n,m}$ associated with each unit cell. The RIS consists of many constituent elements, each of which can be tuned between 2 reflection coefficient values on each polarisation. This 2-state response is often referred to as a 1-bit response. The device provides a 1-bit reflection response at both linear polarisations. This 1-bit response needs to be tuned to the centre operating frequency. We can approximate what the local reflection coefficient for a given unit cell is by: 
+To synthesise a desired RIS re-radiation response, we set the reflection coefficients $Γ_{n,m}$ associated with each unit cell. The RIS consists of many constituent elements, each of which can be tuned between 2 reflection coefficient values on each polarisation. This 2-state response is often referred to as a 1-bit response. The device provides a 1-bit reflection response at both linear polarisations. This 1-bit response needs to be tuned to the centre operating frequency. We can approximate what the local reflection coefficient for a given unit cell: 
 
-- Place the sample unit cell within a waveguide and measuring the S11, subject to some caveats (see ##), or
-- Measure the reflection response of a metasurface consisting of similar unit cell elements, each with the same bias conditions
+- By placing the sample unit cell within a waveguide and measuring the S11, subject to some caveats (see [here](https://ieeexplore.ieee.org/abstract/document/5067833)), or
+- By measuring the reflection response of a metasurface consisting of similar unit cell elements, each with the same bias conditions
 
 We have opted for the second approach here since it requires no more equipment than that required for ascertaining the radiation patterns.
 
@@ -38,7 +37,6 @@ In order to remove the contributions of the cables, horn antennas, and path loss
 
 ### Local reflection response
 
-
 <img src="images/meas_phase_v_frequency.png" width="800" />
 Γ magnitude and phase versus frequency
 
@@ -48,6 +46,8 @@ In order to remove the contributions of the cables, horn antennas, and path loss
 Γ magnitude and phase versus reverse-bias voltage
 
 ### Local reflection coefficients: how to use this data
+
+The raw data for the local reflection responses is available in the measurements folder. 
 
 ## Radiation Patterns
 
