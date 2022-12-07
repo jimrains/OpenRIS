@@ -6,4 +6,4 @@ This directory contains information from measurements involving the RIS. For gen
 
 Far-field to far-field radiation pattern measurements have been ascertained for a set of incident angles. These measurements were taken outdoors due to anechoic chamber space limitations. The setup for the measurements is depicted below (for some reason the original does not translate properly). 
 
-<img src="images/ff_measurement_setup.png" height="400">
+<img src="images/ff_measurement_setup_m.png" height="400">
