@@ -51,8 +51,14 @@ The raw data for the local reflection responses is available in the measurements
 
 ## Radiation Patterns
 
-For the experiment setup for extraction of the far-field patterns of a single tile, see [here](../measurements).
+For the **experiment setup** for extraction of the far-field patterns of a single tile, see [here](../measurements). Far-field to far-field radiation patterns have been extracted for 4 transmitter positions with incident angles, relative to broadside, of 0, 15, 30, and 45 degrees. Below is a representative example. The remaining curves and data can be found in the [measurements](../measurements) directory. The [numerical approximations]() are shown in blue, whilst the measured data points are displayed in red.
 
+<img src="../measurements/ff_singletile/tx_135_VV/tx_135_rx_105.png" height="250">
+<img src="../measurements/ff_singletile/tx_120_VV/tx_120_rx_75.png" height="250">
+<img src="../measurements/ff_singletile/tx_105_VV/tx_90_rx_75.png" height="250">
+<img src="../measurements/ff_singletile/tx_90_VV/tx_90_rx_75.png" height="250">
+
+ 
 ### Calibration
 
 ### Radiation patterns: how to use this data
