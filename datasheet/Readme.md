@@ -59,7 +59,7 @@ For the **experiment setup** for extraction of the far-field patterns of a singl
 
 The measurement setup is depicted below and details can be found [here](../measurements).
 
-<img src="images/ff_measurement_setup_m.png" height="400">
+<img src="../measurements/images/ff_measurement_setup_m.png" height="400">
 
 <img src="../measurements/ff_singletile/tx_135_VV/tx_135_rx_105.png" height="250">
 <img src="../measurements/ff_singletile/tx_120_VV/tx_120_rx_75.png" height="250">
