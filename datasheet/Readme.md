@@ -55,7 +55,7 @@ For the **experiment setup** for extraction of the far-field patterns of a singl
 
 <img src="../measurements/ff_singletile/tx_135_VV/tx_135_rx_105.png" height="250">
 <img src="../measurements/ff_singletile/tx_120_VV/tx_120_rx_75.png" height="250">
-<img src="../measurements/ff_singletile/tx_105_VV/tx_90_rx_75.png" height="250">
+<img src="../measurements/ff_singletile/tx_105_VV/tx_105_rx_90.png" height="250">
 <img src="../measurements/ff_singletile/tx_90_VV/tx_90_rx_75.png" height="250">
 
  
