@@ -16,7 +16,7 @@ There are a total of 512 individually controllable varactor diodes per tile, ser
 
 <img src="images/shift_register.png" height="450" />
 
-### Logic level shifters
+### Level shifter
 
 To interface with the high voltage shift registers, the digital control signals from the Raspberry Pi need to be converted to a higher voltage. The Raspberry Pi GPIO pins provide a logical low and high of 0 V and 3.3 V, respectively. The HV5308 ICs have a recommended operating voltage of 8 - 12 V. We use the CD4504 shift register ICs for this logic voltage level shifting. A logic high of 3.3 V is converted into the shift register logic voltage, V2.
 
