@@ -12,7 +12,7 @@ The below diagram shows the digital circuit side of a RIS tile. Each tile consis
 
 ### Shift registers
 
-The control circuitry is centred around HV5308 shift registers. These are cascaded in groups of 4. Each shift register contains 32 digital outputs with logic levels 0 and V2 volts. A single shift register supports 2 polarisations of 16 unit cells such that they may be individually addressed.
+There are a total of 512 individually controllable varactor diodes per tile, served by a network of shift registers. The control circuitry is centred around HV5308 shift registers. These are cascaded in groups of 4. Each shift register contains 32 digital outputs with logic levels 0 and V2 volts. A single shift register supports the 2 polarisations of 16 unit cells such that they may be individually addressed.
 
 <img src="images/shift_register.png" height="450" />
 
