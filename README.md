@@ -1,5 +1,5 @@
 # OpenRIS
-Reconfigurable Intelligent Surface project for the WiDeS Group at USC. Please direct enquiries to james.rains@glasgow.ac.uk.
+Reconfigurable Intelligent Surface project for the WiDeS Group at USC / CSI Group at University of Glasgow. Please direct enquiries to james.rains@glasgow.ac.uk.
 
 <img src="datasheet/images/system_model_bg.png" height="300" />
 
