@@ -12,7 +12,7 @@ By default, the access point on the USC prototype is set up on boot, with an acc
 
 To set up an access point on the Raspberry Pi 3B from a fresh install, see the guide posted [here](https://learn.sparkfun.com/tutorials/setting-up-a-raspberry-pi-3-as-an-access-point/all). Note the static IP address you use in the __interfaces__ file.
 
-As an alternative, you may set up a mobile hotspot on a PC and get the Pi to connect to you. You will need to connect a monitor/keyboard/mouse to the Pi the first time you do this. 
+As an alternative, you may set up a mobile hotspot on a PC and get the Pi to connect to you. To keep things simple, you may connect a monitor/keyboard/mouse to the Pi the first time you do this. 
 
 ## Socket Setup
 
