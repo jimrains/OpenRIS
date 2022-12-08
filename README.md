@@ -17,9 +17,9 @@ Reconfigurable Intelligent Surface project for the WiDeS Group at USC / CSI Grou
 # Documentation To do:
 - ~~Access point setup~~
 - ~~Socket setup~~
-- Python code (interfacing w/ digital pins)
-- Hardware outline
+- ~~Hardware outline~~
+- ~~Component datasheets~~
 - Pinouts
+- Python code (interfacing w/ digital pins)
 - Altium files
-- Component datasheets
 - Configuration selection
