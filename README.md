@@ -12,10 +12,11 @@ Reconfigurable Intelligent Surface project for the WiDeS Group at USC. Please di
 - [Measurements](https://github.com/jimrains/USCRIS/tree/main/measurements) - data on far-field pattern measurements and channel sounding
 
 # Documentation To do:
-- Access point setup
+- ~~Access point setup~~
 - ~~Socket setup~~
 - Python code (interfacing w/ digital pins)
 - Hardware outline
 - Pinouts
 - Altium files
 - Component datasheets
+- Configuration selection
