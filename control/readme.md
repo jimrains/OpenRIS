@@ -28,12 +28,32 @@ The current procedure for setting up a socket for RIS control involves:
 
 Configurations are sent over the socket in the form of a string of bits. Additionally, a tile number is sent so that the Pi knows which set of GPIO pins it should send the control signals over. 
 
-## Pinout
+## Pinouts
+
+### Tile pinout
 
 Each RIS tile requires 6 digital inputs alongside a DC voltage and a ground connection. The DC voltage should be the same level as the logic high. For the Raspberry Pi 3B, this will be 3.3 V. 
 
 <img src="images/pinout_tile.png" width="500" />
 
+| Pin # | ID   | Function                                           |
+|-------|------|----------------------------------------------------|
+| 1     | NC   | Not connected                                      |
+| 2     | NC   | Not connected                                      |
+| 3     | D4   | Data line 4                                        |
+| 4     | D3   | Data line 3                                        |
+| 5     | L    | Latch (shifts out data to shift register outputs)  |
+| 6     | D2   | Data line 2                                        |
+| 7     | C    | Clock (timing signal)                              |
+| 8     | D1   | Data line 1                                        |
+| 9     | GND  | DC ground                                          |
+| 10    | GND  | DC ground                                          |
+| 11    | Vcc  | DC voltage (3.3 V for Pi 3B)                       |
+| 12    | Vcc  | DC voltage (3.3 V for Pi 3B)                       |
+
+### Pi pinout
+
+The pinout of the Raspberry Pi 3 will depend on the number of tiles that are utilised for a particular arrangement.
 
 ## Pi Graphical User Interface
 
