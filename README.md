@@ -1,6 +1,8 @@
 # USCRIS
 Reconfigurable Intelligent Surface project for the WiDeS Group at USC. Please direct enquiries to james.rains@glasgow.ac.uk.
 
+<img src="datasheet/images/system_model_bg.png" height="300" />
+
 # Documentation
 
 - [Datasheet](https://github.com/jimrains/USCRIS/tree/main/datasheet) - general performance information
