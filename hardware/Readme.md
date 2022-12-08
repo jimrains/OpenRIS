@@ -24,7 +24,7 @@ To interface with the high voltage shift registers, the digital control signals 
 
 The pinout for this can be found on the [datasheet](../datasheet) page and a print of the tile-side pinout can be seen in the above image.
 
-### Power distribution
+### Power management
 
 Voltage regulation is performed by two LN2954 ICs, providing V1 and V2. V1 is applied to the square patches of the RIS elements and V2 is used as the logic high level for the shift registers. These have been placed in series so that V2 is always greater than V1. This is to ensure that the varactor diodes are always reverse-biased.
 
