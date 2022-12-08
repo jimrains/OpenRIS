@@ -32,6 +32,9 @@ Configurations are sent over the socket in the form of a string of bits. Additio
 
 Each RIS tile requires 6 digital inputs alongside a DC voltage and a ground connection. The DC voltage should be the same level as the logic high. For the Raspberry Pi 3B, this will be 3.3 V. 
 
+<img src="images/pinout_tile.png" width="500" />
+
+
 ## Pi Graphical User Interface
 
 If for whatever reason you need to access the graphical user interface (GUI) of the Raspberry Pi, you can use a VNC viewer. One such program you is RealVNC which can be found [here](https://www.realvnc.com/en/connect/download/vnc/). Follow the first two instructions in the **Socket Setup** section above, then:
