@@ -4,7 +4,7 @@ This directory contains information on the device performance
 
 ## Overview of Operating Principles
 
-A typical RIS deployment is shown in the image below. A receiver located within the user equipment (UE) is served by the base station (BS) via the reconfigurable intelligent surface (RIS), circumventing the highly-attenuated direct path between the BS and the UE.
+A typical RIS deployment is shown in the image below. A receiver located within the user equipment (UE) is served by the base station (BS) via the reconfigurable intelligent surface (RIS), circumventing the highly-attenuating direct path between the BS and the UE.
 
 <img src="images/system_model_bg.png" width="400" />
 
