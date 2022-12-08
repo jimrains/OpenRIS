@@ -2,7 +2,7 @@
 
 [![DOI](https://zenodo.org/badge/535866182.svg)](https://zenodo.org/badge/latestdoi/535866182)
 
-Reconfigurable Intelligent Surface project for the WiDeS Group at USC / CSI Group at University of Glasgow. Please direct enquiries to james.rains@glasgow.ac.uk.
+Reconfigurable Intelligent Surface project for the WiDeS Group at USC / CSI Group at University of Glasgow. Please direct enquiries to james.rains@glasgow.ac.uk. This repository is in the process of getting populated with documentation, schematics, and code.
 
 <img src="datasheet/images/system_model_bg.png" height="300" />
 
