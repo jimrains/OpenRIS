@@ -51,7 +51,7 @@ The raw data for the local reflection responses is available in the measurements
 
 ## Radiation Patterns
 
-### Far field measurement setup
+For the experiment setup for extraction of the far-field patterns of a single tile, see [here](https://github.com/jimrains/USCRIS/tree/main/measurements).
 
 ### Calibration
 
