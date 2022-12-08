@@ -26,7 +26,11 @@ The current procedure for setting up a socket for RIS control involves:
 
 ## MATLAB Interfacing
 
-Configurations are sent over the socket in the form of a string of bits. Additionally, a tile number is sent so that the Pi knows which set of GPIO pins it should send the control signals over. For an overview of the GPIO connections, see the [**hardware** directory](https://github.com/jimrains/USCRIS/tree/main/hardware). 
+Configurations are sent over the socket in the form of a string of bits. Additionally, a tile number is sent so that the Pi knows which set of GPIO pins it should send the control signals over. 
+
+## Pinout
+
+Each RIS tile requires 6 digital inputs alongside a DC voltage and a ground connection. The DC voltage should be the same level as the logic high. For the Raspberry Pi 3B, this will be 3.3 V. 
 
 ## Pi Graphical User Interface
 
