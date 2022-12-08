@@ -2,7 +2,9 @@
 
 This directory contains information regarding the RIS digital hardware. For information regarding the design of the metasurface, see [this paper](https://github.com/jimrains/USCRIS/blob/main/publications/1_bit_DP_EuCAP_2023_Conference-5.pdf).
 
-## Overview
+## Metasurface
+
+## Control circuit
 
 The below diagram shows the digital circuit side of a RIS tile. Each tile consists of 16 high voltage shift registers, each with 32 digital outputs which can take on voltage levels of 0 and V2 volts for logic low and logic high, respectively. These shift registers are addressed by a Raspberry Pi 3B via a logic level shifter. A power distribution circuit transforms the voltage at the input jack into two manually tunable voltage levels.
 
