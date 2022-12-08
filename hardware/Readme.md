@@ -29,7 +29,3 @@ The pinout for this can be found on the [datasheet](../datasheet) page and a pri
 Voltage regulation is performed by two LN2954 ICs, providing V1 and V2. V1 is applied to the square patches of the RIS elements and V2 is used as the logic high level for the shift registers. These have been placed in series so that V2 is always greater than V1. This is to ensure that the varactor diodes are always reverse-biased.
 
 <img src="images/power_distribution.png" height="450" />
-
-
-## How it works
-
