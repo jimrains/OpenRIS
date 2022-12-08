@@ -14,6 +14,10 @@ $$ P_r = P_t\frac{G_tG_rd_xd_y\lambda^2}{64\pi^3}|\sum_{m=1-\frac{M}{2}}^{M/2}\s
 
 For a fixed RIS position, the controllability of the wireless channel is achieved through the tunability of $\Gamma_{n,m}$. For a given element geometry, $\Gamma_{n,m}$ determines the change in the phase and magnitude of an incident local electric field - this is observed on the re-radiated local electric field. As governed by the Huygen-Fresnel principle, we can craft the localised re-radiated electric field components such that they add constructively in a dominant direction, form a split beam, or any number of application-dependent forms. Elements are tuned by varying the reactance of the grid impedance associated with a given element. In the prototype in this archive, we have employed varactor diodes to provide this tunable impedance. The digital nature of the control circuitry limits us to 2 tuning states per polarisation per unit cell element. This does not pose a significant limitation on the beamforming performance of these devices.
 
+### Examples
+
+
+
 ## Local Reflection Coefficients
 
 To synthesise a desired RIS re-radiation response, we set the reflection coefficients $Γ_{n,m}$ associated with each unit cell. The RIS consists of many constituent elements, each of which can be tuned between 2 reflection coefficient values on each polarisation. This 2-state response is often referred to as a 1-bit response. The device provides a 1-bit reflection response at both linear polarisations. This 1-bit response needs to be tuned to the centre operating frequency. We can approximate what the local reflection coefficient for a given unit cell: 
@@ -58,7 +62,6 @@ For the **experiment setup** for extraction of the far-field patterns of a singl
 <img src="../measurements/ff_singletile/tx_105_VV/tx_105_rx_90.png" height="250">
 <img src="../measurements/ff_singletile/tx_90_VV/tx_90_rx_75.png" height="250">
 
- 
-### Calibration
-
 ### Radiation patterns: how to use this data
+
+The pattern measurements detailed here give a representative example of the beamforming capabilities of the device. 
