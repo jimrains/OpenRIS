@@ -1,4 +1,7 @@
 # OpenRIS
+
+[![DOI](https://zenodo.org/badge/535866182.svg)](https://zenodo.org/badge/latestdoi/535866182)
+
 Reconfigurable Intelligent Surface project for the WiDeS Group at USC / CSI Group at University of Glasgow. Please direct enquiries to james.rains@glasgow.ac.uk.
 
 <img src="datasheet/images/system_model_bg.png" height="300" />
