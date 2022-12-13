@@ -21,8 +21,15 @@ Below is a selection of radiation pattern measurements for a single tile. The x-
 
 ### Configuration selection
 
-The RIS configurations were selected to maximise received power at a set of angles in the azimuthal plane relative to the RIS. For each incidence angle, dependent on the Tx position, 11 configurations were tested such that azimuth angles of $15^\circ$ to $165^\circ$ in $15^\circ$ steps. These configurations were generated through a simple algorithm that relies on a geometrical optics approximation given below:
+The RIS configurations were selected to maximise received power at a set of angles in the azimuthal plane relative to the RIS. For each incidence angle, dependent on the Tx position, 11 configurations were tested such that azimuth angles of $15^\circ$ to $165^\circ$ in $15^\circ$ steps. These configurations were generated through a simple algorithm that relies on a geometrical optics approximation given below.
+
+If we consider a geometrical optics approximation, the below equation can be used to approximate the power $P_r$, received at an antenna with gain $G_r$, originating from reradiation from a RIS consisting of an arrangement of $MN$ elements. Each element is considered to have lateral dimensions $d_x$ and $d_y$ referring to the x and y axes, respectively. $\lambda$ is the wavelength at the frequency of interest. Taking the origin of the coordinate system at the center of the RIS, $r_{n,m}^t$ and $r_{n,m}^r$ are the distances between the transmitter and element (n,m) and the receiver and element (n,m), respectively. Any path between the transmitter and receiver is assumed to be neglible (thereby warranting the deployment of the RIS to mitigate this). The radiation patterns in reception and transmission are factored into the received power formulation through $F_{n,m}^{combine}$. 
 
 $$ P_r = P_t\frac{G_tG_rd_xd_y\lambda^2}{64\pi^3}|\sum_{m=1-\frac{M}{2}}^{M/2}\sum_{n=1-\frac{N}{2}}^{N/2}\frac{\sqrt{F_{n,m}^{combine}}\ \Gamma_{n,m}}{r_{n,m}^tr_{n,m}^r}e^{(-j\frac{2\pi}{\lambda}(r_{n,m}^t+r_{n,m}^r))}|^2 $$
 
-Details on the formulation of this received power model can be found in [this paper](https://doi.org/10.1109/TAP.2022.3149660).
+For a fixed RIS position, the controllability of the wireless channel is achieved through the tunability of $\Gamma_{n,m}$. For a given element geometry, $\Gamma_{n,m}$ determines the change in the phase and magnitude of an incident local electric field - this is observed on the re-radiated local electric field. Details on the formulation of this received power model can be found in [this paper](https://doi.org/10.1109/TAP.2022.3149660). 
+
+<img src="images/algo.png" height="400">
+
+#### Example
+
