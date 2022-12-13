@@ -16,3 +16,13 @@ Below is a selection of radiation pattern measurements for a single tile. The x-
 <img src="ff_singletile/tx_120_VV/tx_120_rx_75.png" height="250">
 <img src="ff_singletile/tx_105_VV/tx_105_rx_90.png" height="250">
 <img src="ff_singletile/tx_90_VV/tx_90_rx_75.png" height="250">
+
+## Further information on outdoor far-field measurements
+
+### Configuration selection
+
+The RIS configurations were selected to maximise received power at a set of angles in the azimuthal plane relative to the RIS. For each incidence angle, dependent on the Tx position, 11 configurations were tested such that azimuth angles of $15^\circ$ to $165^\circ$ in $15^\circ$ steps. These configurations were generated through a simple algorithm that relies on a geometrical optics approximation given below:
+
+$$ P_r = P_t\frac{G_tG_rd_xd_y\lambda^2}{64\pi^3}|\sum_{m=1-\frac{M}{2}}^{M/2}\sum_{n=1-\frac{N}{2}}^{N/2}\frac{\sqrt{F_{n,m}^{combine}}\ \Gamma_{n,m}}{r_{n,m}^tr_{n,m}^r}e^{(-j\frac{2\pi}{\lambda}(r_{n,m}^t+r_{n,m}^r))}|^2 $$
+
+Details on the formulation of this received power model can be found in [this paper](https://doi.org/10.1109/TAP.2022.3149660).
