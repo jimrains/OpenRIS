@@ -36,24 +36,24 @@ Each RIS tile requires 6 digital inputs alongside a DC voltage and a ground conn
 
 <img src="images/pinout_tile.png" width="500" />
 
-| Pin # | ID   | Function                                           |
-|-------|------|----------------------------------------------------|
-| 1     | NC   | Not connected                                      |
-| 2     | NC   | Not connected                                      |
-| 3     | D4   | Data line 4                                        |
-| 4     | D3   | Data line 3                                        |
-| 5     | L    | Latch (shifts out data to shift register outputs)  |
-| 6     | D2   | Data line 2                                        |
-| 7     | C    | Clock (timing signal)                              |
-| 8     | D1   | Data line 1                                        |
-| 9     | GND  | DC ground                                          |
-| 10    | GND  | DC ground                                          |
-| 11    | Vcc  | DC voltage (3.3 V for Pi 3B)                       |
-| 12    | Vcc  | DC voltage (3.3 V for Pi 3B)                       |
+| Pin # | ID   | Function                                           | T1->Raspberry Pi | T2->Raspberry Pi |
+|-------|------|----------------------------------------------------|------------------|------------------|
+| 1     | NC   | Not connected                                      | -                | -                |
+| 2     | NC   | Not connected                                      | -                | -                |
+| 3     | D4   | Data line 4                                        | 3->12            | 3->19            |
+| 4     | D3   | Data line 3                                        | 4->10            | 4->18            |
+| 5     | L    | Latch (shifts out data to shift register outputs)  | 5->5             | 5->13            |
+| 6     | D2   | Data line 2                                        | 6->8             | 6->16            |
+| 7     | C    | Clock (timing signal)                              | 7->3             | 7->11            |
+| 8     | D1   | Data line 1                                        | 8->7             | 8->15            |
+| 9     | GND  | DC ground                                          | 9->6             | 9->14            |
+| 10    | GND  | DC ground                                          | -                | -                |
+| 11    | Vcc  | DC voltage (3.3 V for Pi 3B)                       | 11->1            | 11->17           |
+| 12    | Vcc  | DC voltage (3.3 V for Pi 3B)                       | -                | -                |
 
 ### Pi pinout
 
-The pinout of the Raspberry Pi 3 will depend on the number of tiles that are utilised for a particular arrangement.
+The pinout of the Raspberry Pi 3 will depend on the number of tiles that are utilised for a particular arrangement. This is governed by the **tile.h** file in this directory. The pin mapping for two tiles is shown in the two right-hand columns in the table above. The Pi GPIO pin numbers refer to the __board__ numbering scheme (i.e., the physical pin number). For more information on the Raspberry Pi GPIO interface, see [here](https://www.raspberrypi.com/documentation/computers/raspberry-pi.html#gpio-and-the-40-pin-header). 
 
 ## Pi Graphical User Interface
 
