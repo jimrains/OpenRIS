@@ -34,7 +34,7 @@ tiledlayout(1,6,'TileSpacing','compact')
 for a = 1:length(phi_rs)
     phi_r = phi_rs(a);
     r = 100; % Far-field to far-field
-    txcoords = [r*cos(pi/180*phi_t) 0 r*sin(pi/180*phi_t)];
+    txcoords = 0.01*[r*cos(pi/180*phi_t) 0 r*sin(pi/180*phi_t)];
     rxcoords = [r*cos(pi/180*phi_r) 0 r*sin(pi/180*phi_r)];
     
     xt = txcoords(1); yt = txcoords(2); zt = txcoords(3);
@@ -219,7 +219,8 @@ for k = 1:2:a(1)
         ylabel('Received power (dB)', 'FontSize',15);
     end
     box on
-    axis([0 180 -100 -60])
+    %axis([0 180 -100 -60])
+    axis([0 180 -65 -25])
     xline(k*15)
     xlabel('\phi', 'FontSize', 15)
 end

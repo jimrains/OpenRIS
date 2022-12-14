@@ -1,9 +1,7 @@
-# load additional Python module
+## Socket server to receive RIS configurations 
 import socket
 import csv
-#import event_pb2
 import tileif as tif
-
 
 PORT = 13591
 
@@ -40,38 +38,27 @@ while True:
     # wait for a connection
     print('waiting for a connection')
     connection, client_address = sock.accept()
-    #sock.send('a'.encode())
     try:
         # show who connected to us
         print('connection from', client_address)
-        # receive the data in small chunks and print it
         while True:
             sockdata = connection.recv(1025)
             if sockdata:
-#                print(len(sockdata))
                 if len(sockdata) == 1025:
                 # output received data
-#                    print("Data: %s" % sockdata)
                     stream = str(sockdata)
                     bitstring = stream[4:-1]
-#                    print(bitstring)
                     tilestring = stream[2:4]
                     tile_num = int(tilestring)
                 # remove MATLAB matrix formatting
                     data = bitstring.replace(';',' ')
-#                    print(data)
                     u = data.split()
                     g = [int(x) for x in u]
                     if len(g) < 512:
                         connection.sendall('b'.encode('utf-8'))
-                        break
-                #    print(len(g))
-#                    print('Received %d bits for tile %d' % (len(g), tile_num))
-                #print(g)
-                    tif.setconf(tile_num, g)
-                #ok = 'a';
-                    connection.sendall('a'.encode('utf-8'))
-                #print(len(g))
+                        break                
+                    tif.setconf(tile_num, g) # Set configuration g on tile tile_num
+                    connection.sendall('a'.encode('utf-8')) # Send acknowledgment of data reception
             else:
                 # no more data -- quit the loop
                 print("no more data.")
