@@ -33,11 +33,13 @@ For a fixed RIS position, the controllability of the wireless channel is achieve
 
 #### Example
 
-See the program **calc_ris_pr.m** in the **ff_numerical_model** directory. 
+See the program **calc_ris_pr.m** in the **ff_numerical_model** directory. By default, the below plots are generated. Configurations and associated far-field radiation patterns are shown in the first figure. These are power samples taken on a radius of 8.3 m (the same distance used in the measurements). The transmitter is located at 8.3 m at $120^\circ$. 
 
-<img src="images/pattern_v_config.png" width="700">
+<img src="images/patern_v_config.png" width="700">
 
-<img src="images/power_in_plane.png" width="700">
+The second figure (below) shows received power versus position in the half-plane to the right-hand side of the RIS for 6 different RIS configurations. 
+
+<img src="images/power_in_plane.png" width="750">
 
 
 
