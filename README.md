@@ -22,4 +22,4 @@ Reconfigurable Intelligent Surface project for the WiDeS Group at USC / CSI Grou
 - Pinouts
 - Python code (interfacing w/ digital pins)
 - Altium files
-- Configuration selection
+- ~~Configuration selection~~
