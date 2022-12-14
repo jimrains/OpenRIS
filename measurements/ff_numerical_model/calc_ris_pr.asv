@@ -1,4 +1,4 @@
-%%%% Link budget model based on Wankai Tang work
+%% Generate RIS configurations to maximise power transfer between given transmitter and receiver angles
 
 close all
 
@@ -7,8 +7,8 @@ lambda = 0.3/f_c; % Wavelength
 N = 16; % Number of columns
 M = 16; % Number of rows
 Pt = 1; % Transmit power (Watts)
-Gt = 10^(17/10); % Transmit antenna gain (linear)
-Gr = 10^(17/10); % Receive antenna gain (linear)
+Gt = 10^(17/10); % Transmitter antenna gain (linear)
+Gr = 10^(17/10); % Receiver antenna gain (linear)
 dx = 30e-3; % Unit cell dimensions in x (horizontal)
 dy = 30e-3; % Unit cell dimensions in y (vertical)
 
@@ -27,7 +27,7 @@ xs = linspace(xmin, xmax, npoints);
 phi_t = 120;
 % Azimuth angles of directions to steer beam
 phi_rs = 15:15:165; 
-gg = figure(1); 
+gg = figure(2); 
 gg.Position = [100,100,1200,400];
 tiledlayout(1,6,'TileSpacing','compact')
 
@@ -133,7 +133,7 @@ for a = 1:length(phi_rs)
     end
 
     if mod(a,2) == 1
-        figure(1); nexttile
+        figure(2); nexttile
         surf(zs, xs, PrdB_hoz)
         title(['\phi_{Rx} = ', num2str(a*15), '^\circ'], 'FontSize', 12)
         view(2)
@@ -191,7 +191,7 @@ cb = colorbar;
 cb.Label.String = 'Received power (dB)';
 cb.Label.FontSize = 15;
 
-gf = figure(2);  gf.Position = [100,100,1200,600];
+gf = figure(1);  gf.Position = [100,100,1200,600];
 title('Received power versus RIS configuration'); tiledlayout(2,6, 'TileSpacing','compact')
 xlabel('Azimuth angle (degrees)')
 tiledlayout(2,6,"TileSpacing","compact")

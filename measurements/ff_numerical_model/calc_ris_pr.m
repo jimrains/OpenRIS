@@ -1,4 +1,4 @@
-%%%% Link budget model based on Wankai Tang work
+%% Generate RIS configurations to maximise power transfer between given transmitter and receiver angles
 
 close all
 
@@ -7,8 +7,8 @@ lambda = 0.3/f_c; % Wavelength
 N = 16; % Number of columns
 M = 16; % Number of rows
 Pt = 1; % Transmit power (Watts)
-Gt = 10^(17/10); % Transmit antenna gain (linear)
-Gr = 10^(17/10); % Receive antenna gain (linear)
+Gt = 10^(17/10); % Transmitter antenna gain (linear)
+Gr = 10^(17/10); % Receiver antenna gain (linear)
 dx = 30e-3; % Unit cell dimensions in x (horizontal)
 dy = 30e-3; % Unit cell dimensions in y (vertical)
 
@@ -27,7 +27,7 @@ xs = linspace(xmin, xmax, npoints);
 phi_t = 120;
 % Azimuth angles of directions to steer beam
 phi_rs = 15:15:165; 
-gg = figure(1); 
+gg = figure(2); 
 gg.Position = [100,100,1200,400];
 tiledlayout(1,6,'TileSpacing','compact')
 
@@ -52,13 +52,14 @@ for a = 1:length(phi_rs)
     gam1 = j;
     gam2 = -j;
 
+    % Iterate over RIS columns and rows
     for m = 1:M
         for n = 1:N
             % x element positions - m represents column
             xnm = dx*m + dx/2 - M*dx/2;
             % y element positions - n represents row
             ynm = dy*n + dy/2 - N*dy/2;
-    
+            
             Rtx = sqrt( (xt - xnm)^2 + (yt - ynm)^2 + zt^2 );
             Rrx = sqrt( (xr - xnm)^2 + (yr - ynm)^2 + zr^2 );
     
@@ -70,8 +71,10 @@ for a = 1:length(phi_rs)
             Fucr = (zr/Rrx);
             Fcombine = Ftx*Fuct*Fucr*Frx;
     
+            % Calculate channel between Tx->(RIS element)->Rx
             s1 = sig + sqrt(Fcombine)*gam1*exp(-j*(2*pi/lambda*(Rtx + Rrx)))/(Rtx*Rrx);
             s2 = sig + sqrt(Fcombine)*gam2*exp(-j*(2*pi/lambda*(Rtx + Rrx)))/(Rtx*Rrx);
+            % Select configuration with larger sum
             if abs(s1) < abs(s2)
                 sig = s2;
                 gam(n,m) = gam2;
@@ -85,10 +88,12 @@ for a = 1:length(phi_rs)
         end
     end
     configs(a, :, :) = gam_ind;
+    % Calculate received power as absolute sum of channel gains, squared
     Pr = ((Pt*Gt*Gr*dx*dy*lambda^2)/(64*pi^3))*abs(sig)^2;
-    PRX(a,:) = ((Pt*Gt*Gr*dx*dy*lambda^2)/(64*pi^3))*abs(sig)^2;
+    %PRX(a,:) = ((Pt*Gt*Gr*dx*dy*lambda^2)/(64*pi^3))*abs(sig)^2;
+    PRX(a,:) = Pr;
 
-    %% Received
+    % Received power versus position in XZ-plane
     PrdB_ver = zeros(npoints,npoints);
     
     %% Sample received power over plane defined by zind, xind
@@ -131,9 +136,9 @@ for a = 1:length(phi_rs)
             PrdB_hoz(xind, zind) = 10*log10(Pr);
        end
     end
-
+    % Plot every other configuration (total of 6)
     if mod(a,2) == 1
-        figure(1); nexttile
+        figure(2); nexttile
         surf(zs, xs, PrdB_hoz)
         title(['\phi_{Rx} = ', num2str(a*15), '^\circ'], 'FontSize', 12)
         view(2)
@@ -143,7 +148,7 @@ for a = 1:length(phi_rs)
         pbaspect([1 2 1])
     end
     
-    %% Scan set of points spaced at angle phi and distance r    
+    %% Calculate Prx at set of points spaced by angle phi at distance r    
     phis = 1:1:179;
     clear PrdB_rnd;
     r = 8.3;
@@ -191,7 +196,7 @@ cb = colorbar;
 cb.Label.String = 'Received power (dB)';
 cb.Label.FontSize = 15;
 
-gf = figure(2);  gf.Position = [100,100,1200,600];
+gf = figure(1);  gf.Position = [100,100,1200,600];
 title('Received power versus RIS configuration'); tiledlayout(2,6, 'TileSpacing','compact')
 xlabel('Azimuth angle (degrees)')
 tiledlayout(2,6,"TileSpacing","compact")
@@ -209,7 +214,6 @@ qw{2} = plot(nan, 'bs','MarkerFaceColor','yellow', 'MarkerSize', 15);
 legend([qw{:}], {'V_{bias} = V^B_1','V_{bias} = V^B_2'}, 'FontSize', 12, 'orientation', 'horizontal', 'position', [0.5-0.23/2 0.92 0.23 0.06])
 for k = 1:2:a(1)
     nexttile
-
     plot(linspace(0,180,length(PXX_NUM(k,:))), PXX_NUM(k,:))
     if k == 1
         ylabel('Received power (dB)', 'FontSize',15);
@@ -219,3 +223,5 @@ for k = 1:2:a(1)
     xline(k*15)
     xlabel('\phi', 'FontSize', 15)
 end
+
+% use exportgraphics() to prevent colorbar label from shrinking
