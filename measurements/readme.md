@@ -13,7 +13,7 @@ During each stage of the measurements, the Tx antenna remained static whilst the
 Below is a selection of radiation pattern measurements for a single tile. The x-axis, $\phi$, corresponds to navigation of the circumference of the semicircle highlighted in gray in the above diagram. For the full set of measurements, see the directories [here](./ff_singletile).
 
 <img src="ff_singletile/tx_135_VV/tx_135_rx_105.png" height="250">
-<img src="ff_singletile/tx_120_VV/tx_120_rx_75.png" height="250">
+<img src="ff_singletile/tx_120_VV/tx_120_rx_150.png" height="250">
 <img src="ff_singletile/tx_105_VV/tx_105_rx_90.png" height="250">
 <img src="ff_singletile/tx_90_VV/tx_90_rx_75.png" height="250">
 
