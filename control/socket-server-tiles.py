@@ -56,7 +56,7 @@ while True:
                     g = [int(x) for x in u]
                     if len(g) < 512:
                         connection.sendall('b'.encode('utf-8'))
-                        break                
+                        break	                
                     tif.setconf(tile_num, g) # Set configuration g on tile tile_num
                     connection.sendall('a'.encode('utf-8')) # Send acknowledgment of data reception
             else:
