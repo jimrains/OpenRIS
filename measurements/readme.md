@@ -29,7 +29,19 @@ $$ P_r = P_t\frac{G_tG_rd_xd_y\lambda^2}{64\pi^3}|\sum_{m=1-\frac{M}{2}}^{M/2}\s
 
 For a fixed RIS position, the controllability of the wireless channel is achieved through the tunability of $\Gamma_{n,m}$. For a given element geometry, $\Gamma_{n,m}$ determines the change in the phase and magnitude of an incident local electric field - this is observed on the re-radiated local electric field. Details on the formulation of this received power model can be found in [this paper](https://doi.org/10.1109/TAP.2022.3149660). 
 
-<img src="images/algo.png" height="400">
+<img src="images/algo.png" height="300">
 
 #### Example
+
+See the program **calc_ris_pr.m** in the **ff_numerical_model** directory. 
+
+<img src="images/configs_ffpatterns.png" width="700">
+
+<img src="images/power_in_plane.png" width="700">
+
+
+
+
+
+
 
