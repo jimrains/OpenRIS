@@ -35,7 +35,7 @@ For a fixed RIS position, the controllability of the wireless channel is achieve
 
 See the program **calc_ris_pr.m** in the **ff_numerical_model** directory. 
 
-<img src="images/configs_ffpatterns.png" width="700">
+<img src="images/pattern_v_config.png" width="700">
 
 <img src="images/power_in_plane.png" width="700">
 
