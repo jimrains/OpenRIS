@@ -11,7 +11,7 @@ Reconfigurable Intelligent Surface project for the WiDeS Group at USC / CSI Grou
 - [Datasheet](https://github.com/jimrains/USCRIS/tree/main/datasheet) - general performance information
 - [Control interface](https://github.com/jimrains/USCRIS/tree/main/control) - programming information
 - [Hardware](https://github.com/jimrains/USCRIS/tree/main/hardware) - details of the digital hardware
-- [Publications](https://github.com/jimrains/USCRIS/tree/main/publications) - papers on and involving the USCRIS prototype
+- [Publications](https://github.com/jimrains/USCRIS/tree/main/publications) - papers on and involving the OpenRIS prototype
 - [Measurements](https://github.com/jimrains/USCRIS/tree/main/measurements) - data on far-field pattern measurements and channel sounding
 
 # Documentation To do:
