@@ -7,15 +7,16 @@
 %% Write another function to generate set of configurations
 %% Given incidence angles in 15 degree steps
 
+
+tx_angle = 120;
+phi_rs = 15:15:165;
+
 port = 13585;
 
 % load configurations from a MAT file
 fn = ['confs_tx', num2str(tx_angle), '.mat'];
 load(fn);
 a = size(loaded_configs);
-
-tx_angle = 120;
-phi_rs = 15:15:165;
 
 for i = 1:a(1)
     conf = squeeze(loaded_configs(i, :, :));
