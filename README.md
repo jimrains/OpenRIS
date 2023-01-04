@@ -17,3 +17,4 @@ Reconfigurable Intelligent Surface project for the WiDeS Group at USC / CSI Grou
 # Documentation To do:
 - Altium files
 - Field trials
+- Global reflection measurement data
