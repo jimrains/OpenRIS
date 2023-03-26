@@ -4,7 +4,8 @@
 
 Reconfigurable Intelligent Surface project for the WiDeS Group at USC / CSI Group at University of Glasgow. Please direct enquiries to james.rains@glasgow.ac.uk. 
 
-<img src="datasheet/images/system_model_bg.png" height="300" />
+<img src="datasheet/images/openris_header.png" width="400" />
+
 
 # Documentation
 
