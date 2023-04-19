@@ -53,7 +53,11 @@ Each RIS tile requires 6 digital inputs alongside a DC voltage and a ground conn
 
 ### Pi pinout
 
+<img src="images/GPIO-Pinout-Diagram-2.png" width="700" />
+
 The pinout of the Raspberry Pi 3 will depend on the number of tiles that are utilised for a particular arrangement. This is governed by the **tile.h** file in this directory. The pin mapping for two tiles is shown in the two right-hand columns in the table above. The Pi GPIO pin numbers refer to the __board__ numbering scheme (i.e., the physical pin number). For more information on the Raspberry Pi GPIO interface, see [here](https://www.raspberrypi.com/documentation/computers/raspberry-pi.html#gpio-and-the-40-pin-header). 
+
+
 
 ## Pi Graphical User Interface
 
