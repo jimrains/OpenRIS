@@ -6,6 +6,14 @@ RIS configurations are sent over a WiFi link hosted on the Raspberry Pi 3B. A so
 
 <img src="images/control_diagram.png" width="500" />
 
+## Ethernet Connection
+
+It is possible to connect to the Raspberry Pi via an ethernet cable through a secure shell through the command:
+
+**ssh pi@raspberrypi.local
+
+with the default password.
+
 ## WiFi Access Point
 
 By default, the access point on the USC prototype is set up on boot, with an access point name **PiRS**. The password is the default and won't be posted here for obvious reasons (just ask James or others in the project). 
