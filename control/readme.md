@@ -10,7 +10,7 @@ RIS configurations are sent over a WiFi link hosted on the Raspberry Pi 3B. A so
 
 It is possible to connect to the Raspberry Pi via an ethernet cable through a secure shell through the command:
 
-**ssh pi@raspberrypi.local
+**ssh pi@raspberrypi.local**
 
 with the default password.
 
