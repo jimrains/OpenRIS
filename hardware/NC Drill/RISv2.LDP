@@ -1,0 +1,4 @@
+Layer Pairs Export File for PCB: C:\Users\2599730r\OneDrive - University of Glasgow\Hardware-Plank\USC\DualPolarRIS\RISv2.PcbDoc
+LayersSetName=Top_Bot_Thru_Holes|DrillFile=risv2.txt|DrillLayers=gtl,g1,g2,gbl
+LayersSetName=Top_1_Blind_Vias|DrillFile=risv2.tx1|DrillLayers=gtl,g1
+LayersSetName=2_Bot_Blind_Vias|DrillFile=risv2.tx2|DrillLayers=g2,gbl
