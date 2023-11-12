@@ -6,6 +6,10 @@ Reconfigurable Intelligent Surface project for the WiDeS Group at USC / CSI Grou
 
 <img src="datasheet/images/openris_header.png" width="400" />
 
+# News
+
+I am currently doing a re-design for operation at 5.8 GHz with some additional improvements to the biasing circuitry. ETA February 2024.
+
 
 # Documentation
 
@@ -14,3 +18,4 @@ Reconfigurable Intelligent Surface project for the WiDeS Group at USC / CSI Grou
 - [Hardware](https://github.com/jimrains/USCRIS/tree/main/hardware) - details of the digital hardware
 - [Publications](https://github.com/jimrains/USCRIS/tree/main/publications) - papers on and involving the OpenRIS prototype
 - [Measurements](https://github.com/jimrains/USCRIS/tree/main/measurements) - data on far-field pattern measurements and channel sounding
+
