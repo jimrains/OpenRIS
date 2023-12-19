@@ -8,7 +8,7 @@ Reconfigurable Intelligent Surface project for the WiDeS Group at USC / CSI Grou
 
 # News
 
-I am currently doing a re-design for operation at 5.8 GHz with some additional improvements to the biasing circuitry. ETA February 2024.
+I am currently doing a re-design with some additional improvements to the biasing circuitry. ETA February 2024.
 
 
 # Documentation
