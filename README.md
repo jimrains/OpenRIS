@@ -6,11 +6,6 @@ Reconfigurable Intelligent Surface project for the WiDeS Group at USC / CSI Grou
 
 <img src="datasheet/images/openris_header.png" width="400" />
 
-# News
-
-I am currently doing a re-design with some additional improvements to the biasing circuitry. ETA February 2024.
-
-
 # Documentation
 
 - [Datasheet](https://github.com/jimrains/USCRIS/tree/main/datasheet) - general performance information
